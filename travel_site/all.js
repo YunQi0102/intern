@@ -1,68 +1,66 @@
-var dropdown = document.querySelector('.select');
-var districtName = document.querySelector('.district_name');
-var attractionArea = document.querySelector('.area');
-var pagination = document.querySelector('.page');
-var currentPage = 1;
-var itemsPerPage = 6;
-var selectedDistrict = '';
+// 資料處理-只留下需要的六項資料
+var newData = []
+newData = data.map(record => ({
+  name: record.Name,
+  zone: record.Zone,
+  add: record.Add,
+  opentime: record.Opentime,
+  tel: record.Tel,
+  free: record.Ticketinfo,
+  picture: record.Picture1
+}));
+
+var dropdown = document.querySelector('.select'); // 下拉選單
+var districtName = document.querySelector('.district_name'); // 行政區名
+var attractionArea = document.querySelector('.area'); // 景點顯示區域
+var pagination = document.querySelector('.page'); // 頁碼
+var currentPage = 1; // 當前頁碼
+var itemsPerPage = 6; // 每頁顯示幾個景點
+var selectedDistrict = ''; // 已選擇的行政區
 
 // 下拉選單
-var len = data.length;
+function selectList() {
 
-var districtList = [];
-for (var i = 0; i < len; i++) {
-  districtList.push(data[i].Zone);
+  // 去除重複行政區並轉成陣列
+  var districtSet = new Set(newData.map(item => item.zone));
+  var districtArray = Array.from(districtSet);
+
+  // 生成選項
+  var optionStr = districtArray.map(zone => `<li class="district_select">${zone}</li>`).join('');
+  document.querySelector('.district_option ul').innerHTML = optionStr;
 }
+selectList();
 
-var district = [];
-districtList.forEach(function (value) {
-  if (district.indexOf(value) == -1) {
-    district.push(value);
-  }
-});
-
-var districtLen = district.length;
-var optionStr = '';
-for (var i = 0; i < districtLen; i++) {
-  optionStr += `<li class="district_select">${district[i]}</li>`;
-}
-document.querySelector('.district_option ul').innerHTML = optionStr;
-
-// 選項點擊監聽
-var selectEl = document.querySelectorAll('.district_option ul li');
-selectEl.forEach(function (option) {
-  option.addEventListener('click', clickDistrict, false);
-});
-
-// 渲染景點資料V
+// 渲染景點資料
 function renderAttractions(attractions, page) {
   var startIndex = (page - 1) * itemsPerPage; // 從第幾個景點開始
   var endIndex = startIndex + itemsPerPage; // 顯示到第幾個景點前
   var displayedAttractions = attractions.slice(startIndex, endIndex); // 如果slice(0, 6)就是顯示前6個景點
   var str = '';
 
+  // 顯示當前頁面的六個景點資料
   displayedAttractions.forEach(function (attraction) {
 
     // 超過字數顯示全文-營業時間
-    var businessHoursContent = attraction.Opentime.length > 35
-      ? `<p class="business_hours toolip">${attraction.Opentime}<span class="tooltiptext">${attraction.Opentime}</span></p>`
-      : `<p class="business_hours">${attraction.Opentime}</p>`;
+    var businessHoursContent = attraction.opentime.length > 35
+      ? `<p class="business_hours toolip">${attraction.opentime}<span class="tooltiptext">${attraction.opentime}</span></p>`
+      : `<p class="business_hours">${attraction.opentime}</p>`;
     // 超過字數顯示全文-地址
-    var locationContent = attraction.Add.length > 35
-      ? `<p class="location toolip">${attraction.Add}<span class="tooltiptext">${attraction.Add}</span></p>`
-      : `<p class="location">${attraction.Add}</p>`;
+    var locationContent = attraction.add.length > 35
+      ? `<p class="location toolip">${attraction.add}<span class="tooltiptext">${attraction.add}</span></p>`
+      : `<p class="location">${attraction.add}</p>`;
     // 超過字數顯示全文-標籤
-    var tagContent = attraction.Ticketinfo.length > 7
-      ? `<p class="tag_p toolip">${attraction.Ticketinfo}<span class="tooltiptext_tag">${attraction.Ticketinfo}</span></p>`
-      : `<p class="tag_p">${attraction.Ticketinfo}</p>`;
+    var tagContent = attraction.free.length > 7
+      ? `<p class="tag_p toolip">${attraction.free}<span class="tooltiptext_tag">${attraction.free}</span></p>`
+      : `<p class="tag_p">${attraction.free}</p>`;
 
     // 景點卡片
     str += `<div class="attraction">
           <div class="attraction_title">
-              <img class="attr_img" src="${attraction.Picture1}" alt="">
+              <img class="attr_img" src="${attraction.picture}" alt="">
               <div class="gradient">
-                  <h3 class="attr_name">${attraction.Name}</h3>
-                  <p class="district">${attraction.Zone}</p>
+                  <h3 class="attr_name">${attraction.name}</h3>
+                  <p class="district">${attraction.zone}</p>
               </div>
           </div>
           <div class="inform">
@@ -77,7 +75,7 @@ function renderAttractions(attractions, page) {
                   </tr>
                   <tr>
                       <td><img class="phone_img" src="img/icons_phone.png"></td>
-                      <td><p class="phone">${attraction.Tel}</p></td>
+                      <td><p class="phone">${attraction.tel}</p></td>
                   </tr>
               </table>
           </div>
@@ -92,7 +90,7 @@ function renderAttractions(attractions, page) {
   attractionArea.innerHTML = (str === '') ? '<p class"no_inform">查無資料</p>' : str;
 }
 
-// 渲染頁碼顯示V
+// 渲染頁碼顯示
 function renderPagination(totalItems, itemsPerPage) {
 
   // 計算總頁數
@@ -101,37 +99,37 @@ function renderPagination(totalItems, itemsPerPage) {
 
   // 上一頁按鈕
   paginationStr += (currentPage > 1)
-    ? `<span class="page_number" data-page="${currentPage - 1}">&lt; prev </span>`
-    : `<span class="page_number disabled">&lt; prev </span>`;
+    ? `<a class="page_number" data-page="${currentPage - 1}">&lt; prev </a>`
+    : `<a class="page_number disabled">&lt; prev </a>`;
 
   // 頁碼
   for (var i = 1; i <= totalPages; i++) {
     paginationStr += (i === currentPage)
-      ? `<span class="page_number current" data-page="${i}">${i}</span>`
-      : `<span class="page_number" data-page="${i}">${i}</span>`;
+      ? `<a class="page_number current" data-page="${i}" disabled>${i}</a>`
+      : `<a class="page_number" data-page="${i}">${i}</a>`;
   }
 
   // 下一頁按鈕
   paginationStr += (currentPage < totalPages)
-    ? `<span class="page_number" data-page="${currentPage + 1}"> next &gt;</span>`
-    : `<span class="page_number disabled"> next &gt;</span>`;
+    ? `<a class="page_number" data-page="${currentPage + 1}"> next &gt;</a>`
+    : `<a class="page_number disabled"> next &gt;</a>`;
 
   // 只有一頁就不顯示頁碼
   pagination.innerHTML = totalPages == 1 ? `` : paginationStr;
 }
 
-// 更新景點資料列表和當前頁碼V
+// 更新景點資料列表和當前頁碼
 function updateAttractionPage(selectedDistrict) {
 
   // 從data篩出選擇的行政區景點資料陣列
-  var filteredAttractions = data.filter(function (attraction) {
-    return attraction.Zone == selectedDistrict;
+  var filteredAttractions = newData.filter(function (attraction) {
+    return attraction.zone == selectedDistrict;
   });
 
   renderAttractions(filteredAttractions, currentPage); // 渲染景點資料
   renderPagination(filteredAttractions.length, itemsPerPage); // 渲染頁碼
 
-  // 頁碼點擊監聽
+  // 頁碼點擊事件
   var pageNumbers = document.querySelectorAll('.page_number');
   pageNumbers.forEach(function (page) {
     page.addEventListener('click', function (e) {
@@ -150,8 +148,10 @@ function updateAttractionPage(selectedDistrict) {
   });
 }
 
-// 刷新頁面並滾動到分隔線V
+// 刷新頁面並滾動到分隔線
 function updatePageAndScroll(selectedDistrict) {
+
+  // 分隔線
   document.querySelector('.divider').innerHTML = `<hr>
         <img id="attraction" src="img/icons_down2.png" class="separate_icon">`;
 
@@ -169,38 +169,52 @@ function updatePageAndScroll(selectedDistrict) {
   updateAttractionPage(selectedDistrict); // 更新景點資料列表和頁碼
 }
 
-// 行政區點擊V
+// 行政區選擇
 function clickDistrict(e) {
   var selectedDistrict = e.target.textContent;
   updatePageAndScroll(selectedDistrict); // 刷新頁面
+
+  // 讓已選擇的行政區無法再次點擊
+  var allOptions = document.querySelectorAll('.district_option ul li, .hot_district ul li');
+  allOptions.forEach(function (option) {
+    option.classList.remove('current');
+  });
+  e.target.classList.add('current');
 }
 
-// 熱門行政區點擊監聽V
+// 選擇行政區選項點擊事件
+var selectEl = document.querySelectorAll('.district_option ul li');
+selectEl.forEach(function (option) {
+  option.addEventListener('click', clickDistrict, false);
+});
+
+// 熱門行政區點擊事件
 var hotEl = document.querySelectorAll('.hot_district ul li');
 hotEl.forEach(function (hot) {
   hot.addEventListener('click', clickDistrict, false);
 });
 
-
 // 回到頂端按鈕
-var backTopBtn = document.getElementById('go_top');
+function backTop(buttonId, scrollThreshold) {
+  var backTopBtn = document.getElementById(buttonId);
 
-// 滾動事件處理
-function handleScroll() {
-  if (window.scrollY > 200) {
-    backTopBtn.classList.add('show');
-  } else {
-    backTopBtn.classList.remove('show');
+  // 頁面滾動
+  function handleScroll() {
+    if (window.scrollY > scrollThreshold) {
+      backTopBtn.classList.add('show');
+    } else {
+      backTopBtn.classList.remove('show');
+    }
   }
+
+  // 頁面滾動事件
+  window.addEventListener('scroll', handleScroll);
+
+  // 按鈕點擊事件
+  backTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  handleScroll();
 }
-
-// 返回頂部按鈕點擊事件
-backTopBtn.addEventListener('click', function () {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// 監聽滾動事件
-window.addEventListener('scroll', handleScroll);
-
-// 初始狀態處理
-handleScroll();
+backTop('go_top', 200);
