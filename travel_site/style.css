@@ -1,0 +1,547 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* body */
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #022434bd;
+    border-radius: 2px;
+}
+
+.background {
+    width: 1024px;
+    height: 380px;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    /* 背景圖為基準 */
+    top: 90px;
+    left: 381px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 3.89px;
+}
+
+/* 下拉選單 */
+.dropdown {
+    position: absolute;
+    /* 背景圖為基準 */
+    width: 446px;
+    height: 35px;
+    top: 195px;
+    left: 280px;
+    background-color: #ffffffb3;
+    border: 3px white solid;
+    border-radius: 3px;
+    padding: 5px 8px;
+    background-image: url(img/icons_down.png);
+    background-repeat: no-repeat;
+    background-size: 16px 11px;
+    background-position: top 17px right 15px;
+    cursor: pointer;
+}
+
+.select {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.district_option {
+    position: absolute;
+    /* .dropdown為基準 */
+    top: 48px;
+    left: -2px;
+    display: none;
+    background-color: #ffffffb3;
+    width: 454px;
+    height: 110px;
+    padding: 4px 6px;
+    z-index: 1;
+    /* 讓選單在熱門行政區的上層 */
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.district_option li {
+    font-size: 18px;
+    padding: 8px 6px;
+    cursor: pointer;
+}
+
+.district_option::-webkit-scrollbar {
+    width: 6px;
+}
+
+.district_option::-webkit-scrollbar-thumb {
+    background-color: #022434bd;
+    border-radius: 10px;
+}
+
+.dropdown:hover .district_option {
+    display: block;
+    /* 滑鼠移入顯示選單 */
+}
+
+.district_option li:hover {
+    background-color: #022434bd;
+    border-radius: 3px;
+    color: white;
+}
+
+/* 熱門行政區 */
+.hot_district {
+    position: absolute;
+    /* 背景圖為基準 */
+    top: 335px;
+    left: 106px;
+    border-radius: 5px;
+    width: 800px;
+    height: 112px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hot_p {
+    font-size: 18px;
+    margin-left: 6px;
+    margin-bottom: 8px;
+}
+
+.hot_district ul {
+    margin-left: 6px;
+}
+
+.hot_district li {
+    display: inline-block;
+    width: 130px;
+    height: 42px;
+    padding: 11px;
+    box-sizing: border-box;
+    margin-left: 23px;
+    margin-top: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.hot1 {
+    background-color: #8A82CC;
+}
+
+.hot2 {
+    background-color: #FFA782;
+}
+
+.hot3 {
+    background-color: #F5D005;
+}
+
+.hot4 {
+    background-color: #559AC8;
+}
+
+/* 分隔 */
+hr {
+    /* border: 1px dashed #559AC8; */
+    background-image: linear-gradient(to right, #559AC8 0%, #559AC8 50%, transparent 50%);
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+    border: 0;
+    margin-top: 120px;
+    width: 900px;
+    height: 2px;
+}
+
+.separate_icon {
+    position: absolute;
+    /* 背景圖為基準 */
+    background-color: white;
+    width: 24px;
+    top: 490px;
+    left: 497px;
+}
+
+/* 景點 */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #8A82CC;
+    margin-top: 50px;
+    margin-bottom: 24px;
+}
+
+.area {
+    display: flex;
+    /* 橫向排列 */
+    flex-wrap: wrap;
+    /* 換行 */
+    width: 960px;
+    margin: 0 32px;
+}
+
+#go_top {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    cursor: pointer;
+}
+
+#go_top.show {
+    display: block;
+    opacity: 1;
+}
+
+.attraction {
+    position: relative;
+    width: 464px;
+    height: 273px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    margin: 0 8px;
+    margin-bottom: 36px;
+}
+
+.attraction_title {
+    /* 圖片標題行政區 */
+    position: relative;
+    width: 464px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.attr_img {
+    position: absolute;
+    width: 464px;
+    /* 讓圖片中心在.attraction_title中心 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gradient {
+    /* 漸層底色 */
+    position: absolute;
+    /* .attraction_title為基準 */
+    bottom: 0;
+    width: 464px;
+    height: 52px;
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.54) 100%);
+}
+
+.attr_name {
+    position: absolute;
+    /* .attraction_title為基準 */
+    top: 14px;
+    left: 22px;
+    font-size: 24px;
+    color: white;
+}
+
+.district {
+    position: absolute;
+    /* .attraction_title為基準 */
+    bottom: 11px;
+    right: 24px;
+    font-size: 16px;
+    color: white;
+}
+
+.inform {
+    padding: 14px 23px;
+}
+
+tr {
+    height: 30px;
+}
+
+td {
+    position: relative;
+}
+
+td p {
+    overflow: hidden;
+    height: 20px;
+    line-height: 22px;
+}
+
+.business_hours,
+.location,
+.phone,
+.tag_p {
+    display: inline-block;
+    line-height: 22px;
+}
+
+.toolip {
+    border-bottom: #929292 dotted 1.5px;
+    padding-bottom: 2px;
+}
+
+.no_inform {
+    text-align: center;
+    width: 950px;
+}
+
+/* 完整文字 */
+.tooltiptext {
+    visibility: hidden;
+    width: 391px;
+    background-color: rgb(255, 232, 193);
+    color: #000000;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 3px;
+    position: absolute;
+    /* 外層td為基準 */
+    top: -5%;
+    left: 0;
+    line-height: 14px;
+}
+
+.tag {
+    position: absolute;
+    bottom: 12px;
+    right: 18px;
+}
+
+.tag_p {
+    display: inline-block;
+    padding-left: 3px;
+    height: 20px;
+    width: 80px;
+    overflow: hidden;
+}
+
+.tooltiptext_tag {
+    visibility: hidden;
+    width: 90px;
+    background-color: rgb(255, 232, 193);
+    color: #000000;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 3px;
+    position: absolute;
+    /* .tag為基準 */
+    top: -60%;
+    left: 22%;
+    line-height: 16px;
+}
+
+td p:hover .tooltiptext,
+.tag_p:hover .tooltiptext_tag {
+    visibility: visible;
+}
+
+.clock {
+    padding-bottom: 2px;
+}
+
+.location_img {
+    padding-left: 1px;
+    padding-top: 1px;
+}
+
+.phone_img {
+    padding-top: 2px;
+    padding-left: 2.5px;
+}
+
+/* 頁碼 */
+.page {
+    text-align: center;
+    padding-top: 10px;
+    color: #4A4A4A;
+    font-size: 14px;
+}
+
+.page_number {
+    display: inline-block;
+    margin: 0 14px;
+    cursor: pointer;
+}
+
+.current {
+    color: #559AC8;
+    cursor: default;
+}
+
+.disabled {
+    color: rgba(74, 74, 74, 0.5);
+    cursor: default;
+}
+
+/* 頁尾 */
+footer {
+    background-color: #559AC8;
+    width: 1024px;
+    height: 90px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer1 {
+    color: white;
+    padding-top: 24px;
+}
+
+.footer2 {
+    color: #FFD366;
+    padding-top: 15px;
+}
