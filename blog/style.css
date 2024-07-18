@@ -1,0 +1,15 @@
+.breadcrumb {
+    background-color: transparent;
+}
+
+.text_hexschool {
+    color: #00CC99 !important;
+}
+
+p, li {
+    line-height: 1.8;
+}
+
+.message {
+    line-height:normal
+}
