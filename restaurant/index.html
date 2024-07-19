@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>六角西餐廳</title>
+    <script src="https://kit.fontawesome.com/f2e3ca11b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 灰條 -->
+    <div class="bg-secondary py-1">
+        <div class="container text-right">
+            <a href="#" class="text-white pr-1"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+    </div>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>六角西餐廳</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            美味菜單
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 ml-auto">
+                    <a href="#" class="btn btn-outline-primary mr-1" data-toggle="modal"
+                        data-target="#loginModal">登入</a>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">註冊</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- 圖片輪播 -->
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item header-carousel-item bg-cover active"
+                    style="background-image: url(https://images.unsplash.com/photo-1492683513054-55277abccd99?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+                    <div class="carousel-caption d-none d-md-block px-2">
+                        <h5>First slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo neque soluta veritatis nobis
+                            vel doloremque similique itaque, id error animi, iusto, veniam quidem rerum sequi ducimus
+                            minus accusantium placeat laborum?</p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel-item bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1497668512640-fcbd959e5338?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=);">
+                    <div class="carousel-caption d-none d-md-block px-2">
+                        <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo neque soluta veritatis nobis
+                            vel doloremque similique itaque, id error animi, iusto, veniam quidem rerum sequi ducimus
+                            minus accusantium placeat laborum?</p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel-item bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1453831362806-3d5577f014a4?dpr=2&auto=format&fit=crop&w=1500&h=1016&q=80&cs=tinysrgb&crop=);">
+                    <div class="carousel-caption d-none d-md-block px-2">
+                        <h5>Third slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo neque soluta veritatis nobis
+                            vel doloremque similique itaque, id error animi, iusto, veniam quidem rerum sequi ducimus
+                            minus accusantium placeat laborum?</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <!-- 三欄飯 -->
+    <section class="bg-info text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <i class="fa-solid fa-bowl-food fa-5x"></i>
+                    </div>
+                    <h3><strong>標題標題</strong></h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus recusandae
+                        nulla.
+                        Vero sint sunt mollitia velit officia illum nobis porro ut magnam delectus. Molestiae tempora
+                        asperiores quae blanditiis nulla!</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <i class="fa-solid fa-bowl-food fa-5x"></i>
+                    </div>
+                    <h3><strong>標題標題</strong></h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus recusandae
+                        nulla.
+                        Vero sint sunt mollitia velit officia illum nobis porro ut magnam delectus. Molestiae tempora
+                        asperiores quae blanditiis nulla!</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <i class="fa-solid fa-bowl-food fa-5x"></i>
+                    </div>
+                    <h3><strong>標題標題</strong></h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus recusandae
+                        nulla.
+                        Vero sint sunt mollitia velit officia illum nobis porro ut magnam delectus. Molestiae tempora
+                        asperiores quae blanditiis nulla!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 烤肉大叔 -->
+    <section class="container-fluid py-5 bg-light text-dark" style="position: relative;">
+        <div class="row">
+            <div class="col-md-5 bg-cover"
+                style="position: absolute; top: 0; bottom: 0;
+                    background-image: url( https://images.unsplash.com/photo-1481185103603-1dc844ef51db?dpr=2&auto=format&fit=crop&w=1080&h=718&q=80&cs=tinysrgb&crop=);">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-7 text-md-light">
+                    <h3><strong>標題標題</strong></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque dolores. Incidunt facilis
+                        id labore magni similique voluptatum voluptatem laudantium deleniti quia harum minus, ut
+                        quisquam consequuntur quas deserunt? Dolorum rem maiores natus deserunt consequatur rerum! Non
+                        perferendis unde sit maxime nihil dolor similique quos harum. Unde officia animi voluptates
+                        alias modi.</p>
+                    <a href="#" class="btn btn-outline-info btn-md-light">查看更多</a>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h3><strong>標題標題</strong></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque dolores. Incidunt
+                                facilis quia harum minus? Dolorum rem maiores natus deserunt consequatur rerum! Non
+                                perferendis unde sit maxime nihil dolor similique quos harum.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h3><strong>標題標題</strong></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque dolores. Incidunt
+                                facilis quia harum minus? Dolorum rem maiores natus deserunt consequatur rerum! Non
+                                perferendis unde sit maxime nihil dolor similique quos harum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 四格漢堡 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mt-2 mb-5"><strong>如何這麼美味</strong></h2>
+            <div class="row my-4">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 text-info"><i class="fa-solid fa-burger fa-4x"></i></div>
+                        <div>
+                            <h3><strong>標題標題標題</strong></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cum quisquam
+                                asperiores
+                                dolor blanditiis quam itaque deleniti nemo corporis. Doloribus quas sit rerum quasi
+                                magnam
+                                iste architecto aperiam, explicabo delectus!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 text-info"><i class="fa-solid fa-burger fa-4x"></i></div>
+                        <div>
+                            <h3><strong>標題標題標題</strong></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cum quisquam
+                                asperiores
+                                dolor blanditiis quam itaque deleniti nemo corporis. Doloribus quas sit rerum quasi
+                                magnam
+                                iste architecto aperiam, explicabo delectus!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 text-info"><i class="fa-solid fa-burger fa-4x"></i></div>
+                        <div>
+                            <h3><strong>標題標題標題</strong></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cum quisquam
+                                asperiores
+                                dolor blanditiis quam itaque deleniti nemo corporis. Doloribus quas sit rerum quasi
+                                magnam
+                                iste architecto aperiam, explicabo delectus!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 text-info"><i class="fa-solid fa-burger fa-4x"></i></div>
+                        <div>
+                            <h3><strong>標題標題標題</strong></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cum quisquam
+                                asperiores
+                                dolor blanditiis quam itaque deleniti nemo corporis. Doloribus quas sit rerum quasi
+                                magnam
+                                iste architecto aperiam, explicabo delectus!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 小女孩 -->
+    <section class="container-fluid py-5 bg-light text-dark" style="position: relative;">
+        <div class="row justify-content-end">
+            <div class="col-md-5 bg-cover"
+                style="position: absolute; top: 0; bottom: 0;
+                        background-image: url(https://images.unsplash.com/photo-1498309313100-e308c8946b45?dpr=2&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=);">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 text-md-light">
+                    <h3><strong>讓快樂持續發生</strong></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda illum tempore
+                        cum cumque, minus dolor rerum inventore ducimus.</p>
+                    <dl class="row">
+                        <dt class="col-sm-3">Description lists</dt>
+                        <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                        <dt class="col-sm-3">Euismod</dt>
+                        <dd class="col-sm-9">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec
+                            elit.</dd>
+                        <dd class="col-sm-9 offset-sm-3">Donec id elit non mi porta gravida at eget metus.</dd>
+
+                        <dt class="col-sm-3">Malesuada porta</dt>
+                        <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+                        <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                        <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                            fermentum massa justo sit amet risus.</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 地圖和表單 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7944334936033!2d121.54672407446517!3d25.04104937781185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc6936939e9%3A0xb745daae8ef9ecb9!2sIntention!5e0!3m2!1szh-TW!2stw!4v1721291204556!5m2!1szh-TW!2stw"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="username">姓名*</label>
+                            <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+                            <div class="invalid-feedback">請輸入姓名</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話*</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="請輸入電話" required>
+                            <div class="invalid-feedback">請輸入電話</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" class="form-control" id="email" placeholder="請輸入 Email" required>
+                            <div class="invalid-feedback">請輸入 Email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">人數*</label>
+                            <input type="number" class="form-control" id="number" placeholder="請輸入人數" required>
+                            <div class="invalid-feedback">請輸入人數</div>
+                        </div>
+                        <div class="custom-controls-stacked">
+                            <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">需要素食</label>
+                            </div>
+                            <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">不需要素食</label>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-secondary">取消</button>
+                            <button type="submit" class="btn btn-primary">送出</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 風景圖*2 -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 bg-cover p-5 text-white"
+                style="background-image: url(https://images.unsplash.com/photo-1484834762280-66a18a5a8f0b?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+                <div class="row">
+                    <div class="col-md-9">
+                        <small>加入我們</small>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, sed!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorum illum earum
+                            architecto consequatur sed officiis vel reiciendis beatae. Quis veritatis incidunt impedit
+                            laudantium non cum, nisi quaerat vero ipsum eum delectus commodi enim dicta velit hic
+                            voluptatum? Nisi impedit, beatae quidem nihil perferendis quaerat nam delectus reprehenderit
+                            laborum ut suscipit placeat distinctio magnam obcaecati dolore adipisci ipsa vitae vel velit
+                            nulla pariatur eum recusandae ab voluptatum. Laborum dolorem voluptatem ullam, et sequi
+                            tempora quae voluptate veritatis, modi vel beatae aut nemo, illo quia odio. Voluptates
+                            aliquam odio molestias exercitationem similique tenetur ipsam reiciendis vero, atque
+                            consequuntur velit, soluta magni.</p>
+                        <a href="#" class="btn btn-outline-warning">加入我們</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-cover p-5 text-white"
+                style="background-image: url(https://images.unsplash.com/photo-1476029764343-569b983f5785?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+                <div class="row">
+                    <div class="col-md-9">
+                        <small>品嘗佳餚</small>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, sed!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorum illum earum
+                            architecto consequatur sed officiis vel reiciendis beatae. Quis veritatis incidunt impedit
+                            laudantium non cum, nisi quaerat vero ipsum eum delectus commodi enim dicta velit hic
+                            voluptatum? Nisi impedit, beatae quidem nihil perferendis quaerat nam delectus reprehenderit
+                            laborum ut suscipit placeat distinctio magnam obcaecati dolore adipisci ipsa vitae vel velit
+                            nulla pariatur eum recusandae ab voluptatum. Laborum dolorem voluptatem ullam, et sequi
+                            tempora quae voluptate veritatis, modi vel beatae aut nemo, illo quia odio. Voluptates
+                            aliquam odio molestias exercitationem similique tenetur ipsam reiciendis vero, atque
+                            consequuntur velit, soluta magni.</p>
+                        <a href="#" class="btn btn-outline-warning">品嘗佳餚</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 頁尾 -->
+    <footer class="bg-light py-5">
+        <div class="container d-flex">
+            <div class="text-secondary mr-2">© Copyright 2017 六角學院</div>
+            <a href="#" class="mr-2">Github</a>
+            <a href="#" class="mr-2">Facebook</a>
+            <a href="#" class="mr-2">About</a>
+        </div>
+    </footer>
+    <!-- 彈出視窗_登入 -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>登入服務</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group mb-2">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="請輸入Email" required>
+                            <small class="text-secondary">我們絕不會隨意將您的Email給予第三者</small>
+                            <div class="invalid-feedback">請輸入Email</div>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="loginPassword">密碼</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="請輸入密碼"
+                                autocomplete="current-password" required>
+                            <div class="invalid-feedback">請輸入密碼</div>
+                        </div>
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">記住我 </label>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal"
+                        data-target="#registerModal">還沒有帳號嗎？點我註冊</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary">登入</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 彈出視窗_註冊 -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>註冊服務</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="text-secondary"><strong>註冊六角西餐廳</strong></h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure placeat voluptatum eum
+                                rerum a, porro culpa labore corrupti. Repudiandae odio ipsam consequatur quisquam
+                                corrupti nulla facilis voluptatibus aliquid. Cupiditate, debitis!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime itaque harum quam illo,
+                                officiis fugit id ipsum minus nesciunt nihil, obcaecati in distinctio similique
+                                consequuntur provident omnis quaerat molestias suscipit?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi vero eum aut enim.
+                                Necessitatibus, vero reiciendis expedita fugit veniam at architecto ipsum accusamus
+                                minus quaerat, maiores alias illo dolorum eius.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="container">
+                                <form action="">
+                                    <div class="form-group mb-2">
+                                        <label for="registerEmail">Email</label>
+                                        <input type="email" class="form-control" id="registerEmail"
+                                            placeholder="請輸入Email" required>
+                                        <small class="text-secondary">我們絕不會隨意將您的Email給予第三者</small>
+                                        <div class="invalid-feedback">請輸入Email</div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="registerPassword">密碼</label>
+                                        <input type="password" class="form-control" id="registerPassword"
+                                            placeholder="請輸入密碼" autocomplete="current-password" required>
+                                        <div class="invalid-feedback">請輸入密碼</div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="registerPasswordCheck">確認密碼</label>
+                                        <input type="password" class="form-control" id="registerPasswordCheck"
+                                            placeholder="請再次輸入密碼" autocomplete="new-password" required>
+                                        <div class="invalid-feedback">請重新確認密碼</div>
+                                    </div>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="agreeRule">
+                                        <label class="form-check-label" for="agreeRule">同意條款</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal"
+                        data-target="#loginModal">已註冊過嗎？點我登入</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function () {
+                var target = $(this).data('target');
+                $(target).on('shown.bs.modal', function () {
+                    $('body').addClass('modal-open')
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
