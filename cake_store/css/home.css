@@ -1,0 +1,380 @@
+/* 少於xl樣式調整 */
+@media (max-width: 1200px) {
+    header {
+        height: 500px !important;
+    }
+
+    /* 選單 */
+    header .menu {
+        top: 430px !important;
+    }
+
+    /* 選單圖片 */
+    header .menu-img,
+    header .menu-cover {
+        width: 260px !important;
+    }
+
+    /* 選單文字 */
+    header .menu-text {
+        left: 110px !important;
+    }
+
+    /* section圖片 */
+    section .img1,
+    section .img2 {
+        width: 430px !important;
+    }
+
+    /* section標語2 */
+    section .title2 {
+        left: 400px !important;
+    }
+}
+
+/* 少於lg樣式調整 */
+@media (max-width: 992px) {
+    header {
+        height: 400px !important;
+    }
+
+    /* 選單 */
+    header .menu {
+        top: 360px !important;
+    }
+
+    /* 選單圖片 */
+    header .menu-img,
+    header .menu-cover {
+        width: 240px !important;
+    }
+
+    /* 選單文字 */
+    header .menu-text {
+        left: 100px !important;
+    }
+
+    /* --section直向內文-- */
+    section .home-paragraph {
+        writing-mode: horizontal-tb !important;
+        height: auto !important;
+        line-height: 30px !important;
+    }
+
+    /* --section圖片大小-- */
+    section .img1,
+    section .img2 {
+        position: relative !important;
+        width: 550px;
+        height: 150px;
+    }
+
+    /* --section標語圖-- */
+    section .title1,
+    section .title2,
+    section .title3 {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 90px !important;
+        width: 300px !important;
+    }
+
+    /* 本日精選 */
+    .border-right-0 {
+        border: #EAF0ED 1px solid !important;
+    }
+
+    /* --為什麼選擇做甜點-- */
+
+    /* 背景大小 */
+    .py-section1 {
+        padding: 0 !important;
+        margin-top: 210px !important;
+    }
+
+    /* 圖片 */
+    section .img1 {
+        background-image: url(https://bit.ly/2xPn7Eq);
+    }
+
+    /* 標語圖 */
+    section .title1 {
+        background-image: url(../img/mobile-title1.svg) !important;
+    }
+
+    /* --為什麼一定要吃甜點-- */
+
+    /* 背景大小 */
+    .py-section2 {
+        padding: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* 圖片 */
+    section .img2 {
+        background-image: url(https://bit.ly/2zzAQS4);
+    }
+
+    /* 標語圖 */
+    section .title2 {
+        background-image: url(../img/mobile-title2.svg) !important;
+    }
+
+    /* --想吃甜點不需要理由-- */
+
+    /* 背景大小 */
+    .py-section3 {
+        margin: 0 !important;
+    }
+
+    /* 標語圖 */
+    section .title3 {
+        background-image: url(../img/mobile-title3.svg) !important;
+    }
+}
+
+/* 少於md樣式調整 */
+@media (max-width: 768px) {
+    header {
+        height: 400px !important;
+    }
+
+    /* 選單 */
+    header .menu {
+        top: 360px !important;
+    }
+
+    /* 選單圖片 */
+    header .menu-img,
+    header .menu-cover {
+        width: 180px !important;
+    }
+
+    /* 選單文字 */
+    header .menu-text {
+        left: 75px !important;
+    }
+
+    /* --section標語圖-- */
+    section .title1,
+    section .title2,
+    section .title3 {
+        height: 80px !important;
+        width: 270px !important;
+    }
+}
+
+/* 少於sm樣式調整 */
+@media (max-width: 576px) {
+
+    /* 選單圖片 */
+    header .menu-img,
+    header .menu-cover {
+        width: 146px !important;
+    }
+
+    /* 選單文字 */
+    header .menu-text {
+        left: 55px !important;
+    }
+}
+
+/* 主圖片 */
+header .main-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(https://bit.ly/2OhbMHr);
+}
+
+/* --三欄選單-- */
+
+/* 選單大小 */
+header .menu-img {
+    width: 300px;
+    height: 250px;
+}
+
+/* 本日精選圖 */
+header .menu-img.first {
+    background-image: url(https://bit.ly/2QbVsVR);
+}
+
+/* 人氣推薦圖 */
+header .menu-img.second {
+    background-image: url(https://bit.ly/2QiWeQW);
+}
+
+/* 新品上市圖 */
+header .menu-img.third {
+    background-image: url(https://bit.ly/2R5tqwD);
+}
+
+/* 選單一般表層 */
+header .menu-cover {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 250px;
+    background-color: rgba(63, 93, 69, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* 選單一般文字 */
+header .menu-text {
+    position: absolute;
+    top: 0;
+    left: 128px;
+    writing-mode: vertical-rl;
+    font-size: 26px;
+    color: #ffffff;
+    letter-spacing: 10px;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+/* 選單懸停背景(清晰黃底) */
+header .menu-a:hover .menu-cover {
+    background-color: rgba(255, 225, 128, 0.8);
+    backdrop-filter: unset;
+    transition: 0.5s;
+}
+
+/* 選單懸停文字 */
+header .menu-a:hover .menu-text {
+    color: #3F5D45;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+/* 已選取的選單表層(清晰黃底) */
+header .menu-cover.active {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 250px;
+    background-color: rgba(255, 225, 128, 0.8);
+    backdrop-filter: unset;
+}
+
+/* 已選取的文字 */
+header .menu-text.active {
+    color: #3F5D45;
+    font-weight: bold;
+}
+
+/* 選單邊框 */
+header .menu-border {
+    border-left: white 1px solid;
+    border-right: white 1px solid;
+}
+
+/* --section直向內文-- */
+section .home-paragraph {
+    writing-mode: vertical-rl;
+    height: 330px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+/* --為什麼選擇做甜點-- */
+
+/* 背景大小 */
+.py-section1 {
+    padding: 50px 0px;
+    margin-top: 280px;
+}
+
+/* 圖片 */
+section .img1 {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 550px;
+    height: 490px;
+    background-image: url(https://bit.ly/2xPn7Eq);
+}
+
+/* 標語圖 */
+section .title1 {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    height: 300px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-image: url(../img/title1.svg);
+}
+
+/* --為什麼一定要吃甜點-- */
+
+/* 背景大小 */
+.py-section2 {
+    padding: 50px 0px;
+    margin-top: 100px;
+}
+
+/* 圖片 */
+section .img2 {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    width: 550px;
+    height: 490px;
+    background-image: url(https://bit.ly/2zzAQS4);
+}
+
+/* 標語圖 */
+section .title2 {
+    position: absolute;
+    top: -20%;
+    left: 440px;
+    height: 300px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-image: url(../img/title2.svg);
+}
+
+/* --想吃甜點不需要理由-- */
+
+/* 背景大小 */
+.py-section3 {
+    padding: 40px 0px;
+    margin-top: 110px;
+    margin-bottom: 330px;
+}
+
+/* 標語圖 */
+section .title3 {
+    position: absolute;
+    top: -5%;
+    height: 330px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-image: url(../img/title3.svg);
+}
+
+/* --精選卡片-- */
+
+/* 圖片大小 */
+section .card1-img, section .card2-img, section .card3-img {
+    position: relative;
+    height: 310px;
+}
+
+/* 圖片1 */
+section .card1-img {
+    background-image: url(https://bit.ly/2zBjQuq);
+}
+
+/* 圖片2 */
+section .card2-img {
+    background-image: url(https://bit.ly/2zBDAxX);
+}
+
+/* 圖片3 */
+section .card3-img {
+    background-image: url(https://bit.ly/2QbVsVR);
+}

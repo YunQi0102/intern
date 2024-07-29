@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/default_change.css">
+    <link rel="stylesheet" href="./css/success.css">
+    <title>六角甜點工坊-首頁</title>
+    <script src="https://kit.fontawesome.com/f2e3ca11b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-white pt-3 pb-3 sticky-top">
+        <div class="container px-0 d-flex align-items-end">
+            <!-- 甜點店Logo(md以上) -->
+            <a class="navbar-brand mx-0 d-none d-md-block" href="index.html">
+                <img src="./img/logo-nav.svg" width="220px" height="40px" class="d-inline-block align-top" alt="">
+            </a>
+            <!-- 甜點店Logo(md下) -->
+            <a class="navbar-brand mx-0 pt-0 d-block d-md-none" href="index.html">
+                <img src="./img/mobile-logo-nav.svg" width="140px" height="30px" class="d-inline-block align-top"
+                    alt="">
+            </a>
+            <!-- 購物車 -->
+            <div class="mx-3 mb-2 order-md-last">
+                <a href="carts.html" class="cart-set"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+            </div>
+            <!-- 選單按鈕 -->
+            <button class="navbar-toggler order-first border-0" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 選單 -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link mt-2 ml-2 mr-5 mt-md-0" href="index.html">首頁</a>
+                    <a class="nav-item nav-link ml-2 mr-5" href="products.html">甜點</a>
+                    <a class="nav-item nav-link ml-2 mr-5" href="register.html">登入</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container d-flex justify-content-center mb-5" style="height: 500px;">
+        <div class="row d-flex flex-column align-items-center justify-content-center w-100 h-100"
+            style="position: relative;">
+            <!-- 背景圖 -->
+            <div class="main-img col-md-12 bg-cover"></div>
+            <!-- 進度條 -->
+            <div class="myprocess px-0 col-6 col-md-5 col-lg-4">
+                <div class="process-set d-flex justify-content-between" style="position: relative;">
+                    <div class="step-circle text-light-green d-flex align-items-center justify-content-center">
+                        <i class="d-none d-lg-block fa-solid fa-check fa-lg"></i>
+                        <i class="d-block d-lg-none fa-solid fa-check fa"></i>
+                    </div>
+                    <div class="step-circle text-light-green d-flex align-items-center justify-content-center">
+                        <i class="d-none d-lg-block fa-solid fa-check fa-lg"></i>
+                        <i class="d-block d-lg-none fa-solid fa-check fa"></i>
+                    </div>
+                    <div class="step-circle text-light-green d-flex align-items-center justify-content-center">
+                        <i class="d-none d-lg-block fa-solid fa-check fa-lg"></i>
+                        <i class="d-block d-lg-none fa-solid fa-check fa"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 標題 -->
+            <div class="success-title"></div>
+            <!-- 按鈕 -->
+            <a href="products.html" class="btn d-none d-sm-block bg-btn-main btn-continue text-main rounded-0 py-3">
+                <span class="h4"><strong>繼續逛逛</strong></span></a>
+        </div>
+    </div>
+    <!-- 按鈕 -->
+    <a href="products.html" class="btn btn-block d-block d-sm-none bg-btn-main text-main rounded-0 py-3">
+        <span class="h4"><strong>繼續逛逛</strong></span></a>
+    <!-- 頁尾 -->
+    <footer>
+        <!-- 深綠 -->
+        <div class="pm-footer bg-main">
+            <div class="container">
+                <div class="row footer-container align-items-center">
+                    <div class="col-12 col-lg-5 col-xl-6 mb-4 mb-lg-0
+                            d-flex align-items-center justify-content-lg-start justify-content-center">
+                        <!-- logo -->
+                        <div class="f-logo1 bg-cover mr-3"></div>
+                        <!-- 訂閱郵件標題 -->
+                        <h3 class="text-light-green mt-1 mb-0">訂閱你我的甜蜜郵件</h3>
+                    </div>
+                    <!-- email -->
+                    <div class="col-12 col-lg-7 col-xl-6">
+                        <form class="form-inline">
+                            <div class="input-group input-group-lg w-100">
+                                <!-- icon -->
+                                <div class="input-group-append"><span class="input-group-text bg-input px-mail-icon"
+                                        id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                                </div>
+                                <!-- 輸入框 -->
+                                <input type="text" class="form-control bg-input border-0 p-mail-input"
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                                <!-- 送出按鈕 -->
+                                <div class="input-group-prepend">
+                                    <a class="input-group-text btn bg-btn-main text-main px-mail-go"
+                                        id="basic-addon1"><i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 淺綠1 -->
+        <div class="pt-4 pb-3 bg-main-light">
+            <div class="container">
+                <div class="footer-container d-flex flex-row no-gutters">
+                    <div class="col-12 col-md-8">
+                        <div class="flex-column no-gutters">
+                            <!-- logo -->
+                            <div class="col-md">
+                                <div class="f-logo2"></div>
+                            </div>
+                            <!-- 聯絡資訊 -->
+                            <div class="col-md mt-footer-inform text-main">
+                                <span class="d-block">07-1234-5678</span>
+                                <span class="d-block"><a href="#" class="text-main">sweetaste@email.com</a></span>
+                                <span class="d-block">800 高雄市新興區幸福路 520 號</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 今天是吃甜點的好日子 -->
+                    <div class="d-none d-md-block col-md-4">
+                        <div class="title4 ml-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 淺綠2 -->
+        <div class="pb-4 bg-main-light">
+            <div class="container">
+                <div class="footer-container d-flex row no-gutters">
+                    <!-- 社群icons -->
+                    <div class="col-12 col-md-4 col-lg-7 d-flex">
+                        <div class="icon-ins mr-2"></div>
+                        <div class="icon-fb"></div>
+                    </div>
+                    <!-- 版權所有 -->
+                    <div class="col-12 col-md-8 col-lg-5 mt-1 mt-md-0
+                            d-flex justify-content-start justify-content-md-end align-items-end text-main">
+                        <p class="rights-reserved m-0">© 2018 Sweetaste* All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

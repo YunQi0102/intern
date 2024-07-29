@@ -1,0 +1,266 @@
+/* 少於xl樣式調整 */
+@media (max-width: 1200px) {
+
+    /* 頁尾訂閱郵件標題 */
+    .footer-container h3 {
+        font-size: 25px;
+    }
+}
+
+/* 少於lg樣式調整 */
+@media (max-width: 992px) {
+
+    /* 頁尾單欄mb */
+    .footer-container .col-12 {
+        margin-bottom: 10px;
+    }
+}
+
+/* 少於md樣式調整 */
+@media (max-width: 768px) {
+
+    /* 頁尾自訂container */
+    .footer-container {
+        padding: 0 20px !important;
+    }
+
+    /* 頁尾聯絡資訊 */
+    .footer-container .mt-footer-inform {
+        margin-top: 10px;
+    }
+}
+
+/* 圖片置中 */
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+}
+
+/* 取消上邊框 */
+.border-top-0 {
+    border-top: 0;
+}
+
+/* 取消右邊框 */
+.border-right-0 {
+    border-right: 0;
+}
+
+/* 購物車按鈕 */
+nav .cart-set {
+    color: #3f5d4580;
+}
+
+/* 購物車按鈕懸停 */
+nav .cart-set:hover {
+    color: #3f5d45a3;
+}
+
+/* 購物車按鈕當前頁 */
+nav .cart-set.active {
+    color: #3F5D45;
+}
+
+/* 輸入框提示字 */
+input::placeholder {
+    color: #8DA291 !important;
+}
+
+/* --文字色-- */
+
+/* 主要深綠 */
+.text-main {
+    color: #3F5D45 !important;
+}
+
+/* section內文、訂單摘要/購物清單/連結社群標題 */
+.text-green {
+    color: #8DA291;
+}
+
+/* 購物車頁標題、頁尾訂閱郵件 */
+.text-light-green {
+    color: #EAF0ED;
+}
+
+/* --背景色-- */
+
+/* 深綠背景 */
+.bg-main {
+    background-color: #3F5D45;
+}
+
+/* 淺綠背景 */
+.bg-main-light {
+    background-color: #EAF0ED;
+}
+
+/* input底色 */
+.bg-input {
+    background-color: #EAF0ED !important;
+}
+
+/* 主要按鈕色 */
+.bg-btn-main {
+    background-color: #FFE180;
+}
+
+/* 主要按鈕懸停 */
+.bg-btn-main:hover {
+    background-color: #ffd85a;
+}
+
+/* --卡片-- */
+
+/* 卡片標籤 */
+.card .square {
+    width: 48px;
+    height: 125px;
+    background-color: #3F5D45;
+    padding-right: 10px;
+    color: white;
+    writing-mode: vertical-rl;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
+
+/* 卡片外邊框 */
+.card-border-0 {
+    border: 0 !important;
+}
+
+/* 卡片內容邊框 */
+.card-border {
+    border: #EAF0ED 1px solid;
+}
+
+/* 卡片名稱價錢 */
+.card .container .pm-card-name {
+    padding: 18px 0;
+    margin-bottom: 0;
+}
+
+/* 加入購物車懸停 */
+.card .container .btn-cart:hover {
+    background-color: #d4e0da;
+}
+
+/* --愛心按鈕-- */
+
+.card .btn-heart {
+    cursor: pointer;
+}
+
+/* 愛心位置 */
+.card .btn-heart .heart-active,
+.card .btn-heart .heart-default {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+}
+
+/* 愛心預設(空心) */
+.card .btn-heart .heart-default {
+    color: #3F5D45;
+}
+
+/* 愛心點擊後(實心) */
+.card .btn-heart .heart-active {
+    color: #3F5D45;
+    opacity: 0;
+}
+
+/* --頁尾-- */
+
+/* 頁尾深綠 */
+footer .pm-footer {
+    padding: 35px 0;
+    margin-top: 30px;
+}
+
+/* 頁尾container */
+footer .footer-container {
+    padding: 0 95px;
+}
+
+/* 頁尾logo1 */
+.footer-container .f-logo1 {
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/footer-logo.svg);
+}
+
+/* 頁尾logo2 */
+.footer-container .f-logo2 {
+    width: 170px;
+    height: 40px;
+    background-image: url(../img/footer-logo-word.svg);
+    background-repeat: no-repeat;
+}
+
+/* 頁尾mail icon */
+.footer-container .px-mail-icon {
+    padding: 0 25px !important;
+}
+
+/* 頁尾mail輸入框 */
+.footer-container .p-mail-input {
+    padding: 30px 5px 30px !important;
+}
+
+/* 頁尾mail送出按鈕 */
+.footer-container .px-mail-go {
+    padding: 0 20px !important;
+}
+
+/* 頁尾標語圖 */
+.footer-container .title4 {
+    width: 60px;
+    height: 220px;
+    background-image: url(../img/title4.svg);
+    background-repeat: no-repeat;
+}
+
+/* 頁尾聯絡資訊 */
+.footer-container .mt-footer-inform {
+    margin-top: 100px;
+}
+
+/* 頁尾icon */
+.footer-container .icon-ins,
+.footer-container .icon-fb {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-container .icon-ins {
+    background-image: url(../img/instagram.svg);
+}
+
+/* 頁尾icon */
+.footer-container .icon-fb {
+    background-image: url(../img/facebook.svg);
+}
+
+/* 頁尾版權所有 */
+.footer-container .rights-reserved {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* --carts訂單摘要-- */
+
+/* 背景 */
+.bg-order-total {
+    background-color: #3F5D45;
+    height: 230px;
+}
+
+/* 標題 */
+.p-ot-title {
+    padding: 30px 0 15px;
+}
+
+/* 內容 */
+.table .p-table-row {
+    padding: 15px 0 0 !important;
+}

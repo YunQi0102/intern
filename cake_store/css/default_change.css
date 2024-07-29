@@ -1,0 +1,36 @@
+/* nav按鈕 */
+.nav-link {
+    color: #3f5d4580 !important;
+}
+
+/* nav按鈕懸停 */
+.nav-link:hover {
+    color: #3f5d45a3 !important;
+}
+
+/* nav當前頁按鈕 */
+.nav-link.active {
+    color: #3F5D45 !important;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+/* 輸入框logo和輸入按鈕 */
+.input-group-text {
+    border: 0;
+}
+
+/* 按鈕、輸入框focus樣式 */
+.form-control:focus, .btn:focus, .page-link:focus {
+    box-shadow: none;
+}
+
+/* 導覽選單 */
+.list-group-item {
+    padding: 15px 0;
+}
+
+/* 導覽選單懸停 */
+.list-group-item-action:hover {
+    background-color: #EAF0ED;
+}

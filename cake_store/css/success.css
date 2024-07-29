@@ -1,0 +1,75 @@
+/* 少於sm樣式調整 */
+@media (max-width: 576px) {
+    div.container {
+        padding: 0;
+        margin: 0 auto !important;
+    }
+
+    /* 頁尾深綠 */
+    footer .pm-footer {
+        margin-top: 0;
+    }
+}
+
+/* 主要圖片 */
+.container .main-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(https://bit.ly/2P7GhNd);
+}
+
+/* --進度條-- */
+
+/* 位置調整 */
+.myprocess.col-lg-4 {
+    flex: 0 0 13%;
+}
+
+/* 進度線 */
+.process-set:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #3f5d45;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+/* 進度點 */
+.process-set .step-circle {
+    height: 25px;
+    width: 25px;
+    border: 1px solid #3f5d45;
+    border-radius: 20px;
+    position: relative;
+    background-color: #3f5d45;
+    z-index: 2;
+}
+
+/* 付款成功 */
+.success-title {
+    width: 190px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-image: url(../img/success.svg);
+    background-size: contain;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+/* 繼續按鈕 */
+.container .btn-continue {
+    width: 310px;
+    height: 65px;
+    z-index: 1;
+}
+
+/* 頁尾深綠 */
+footer .pm-footer {
+    margin-top: 0;
+}

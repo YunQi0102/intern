@@ -1,0 +1,192 @@
+/* 少於sm樣式調整 */
+@media (max-width: 576px) {
+
+    /* 自訂container */
+    .checkout-container {
+        padding: 0 !important;
+    }
+}
+
+/* 少於md樣式調整 */
+@media (max-width: 768px) {
+
+    /* 頁尾深綠 */
+    footer .pm-footer {
+        margin-top: 0;
+    }
+}
+
+/* 少於lg樣式調整 */
+@media (max-width: 992px) {
+
+    /* 標題 */
+    .checkout-container .p-checkout-title h1 {
+        font-size: 36px;
+    }
+
+    /* 表單標題 */
+    .checkout-container .p-checkout form {
+        font-size: 20px;
+    }
+
+    /* 電子發票或寄送按鈕 */
+    .checkout-container .btn-group .btn-invoice-set {
+        font-size: 22px !important;
+    }
+
+    /* 卡片標題 */
+    .card-header {
+        font-size: 24px;
+    }
+
+    /* 卡片商品名稱 */
+    .media-body h5 {
+        font-size: 18px !important;
+    }
+
+    /* 卡片商品價錢 */
+    .media-body span {
+        font-size: 20px !important;
+    }
+
+    /* 進度點 */
+    .process-set .step-circle {
+        height: 22px !important;
+        width: 22px !important;
+    }
+}
+
+/* 自訂container */
+.checkout-container {
+    padding: 30px 0 50px;
+}
+
+/* --表單-- */
+
+/* 表單padding */
+.checkout-container .p-checkout {
+    padding: 30px;
+}
+
+/* 背景 */
+.bg-transport {
+    background-color: #3F5D45;
+}
+
+/* 標題 */
+.checkout-container .p-checkout-title {
+    padding: 0 0 16px;
+}
+
+/* 輸入框 */
+.form-set {
+    border: 0;
+    border-radius: 0 !important;
+    font-size: 20px;
+    height: 55px !important;
+}
+
+/* --進度條-- */
+
+/* 進度線 */
+.process-set:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #8da291;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+/* 進度點 */
+.process-set .step-circle {
+    height: 25px;
+    width: 25px;
+    border: 1px solid #8da291;
+    border-radius: 20px;
+    position: relative;
+    background-color: #3f5d45;
+    z-index: 2;
+}
+
+/* 當前進度線 */
+.process-set.active1:after,
+.process-set.active2:after,
+.process-set.active3:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    background-color: #eaf0ed;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* 進度：第一步 */
+.process-set.active1:after {
+    width: 0%;
+}
+
+/* 進度：第二步 */
+.process-set.active2:after {
+    width: 50%;
+}
+
+/* 進度：第三步 */
+.process-set.active3:after {
+    width: 100%;
+}
+
+/* 當前進度邊框 */
+.process-set .step-circle.active {
+    border-color: #eaf0ed;
+}
+
+/* --電子發票或寄送按鈕-- */
+
+/* 電子發票(預設) */
+.checkout-container .btn-group .btn-invoice-set.active {
+    background-color: #EAF0ED;
+    border: #EAF0ED 1px solid;
+    border-radius: 0;
+    font-size: 24px;
+    color: #3F5D45;
+    height: 60px;
+    pointer-events: none;
+}
+
+/* 郵寄發票 */
+.checkout-container .btn-group .btn-invoice-set {
+    background-color: #3F5D45;
+    border: #EAF0ED 1px solid;
+    border-radius: 0;
+    font-size: 24px;
+    color: #EAF0ED;
+    height: 60px;
+}
+
+/* 懸停 */
+.checkout-container .btn-group .btn-invoice-set:hover {
+    background-color: #EAF0ED;
+    border: #EAF0ED 1px solid;
+    border-radius: 0;
+    font-size: 24px;
+    color: #3F5D45;
+    height: 60px;
+}
+
+/* 表單切換，確保只有一個表單顯示 */
+.collapse:not(.show) {
+    display: none;
+}
+
+/* 購物清單圖片 */
+.checkout-container .card-body .media-img {
+    width: 110px;
+    height: 90px;
+    background-image: url('https://images.unsplash.com/photo-1497052254059-f3e0bf1a5133?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ce7267675921fc7e41b5610f49750a40&auto=format&fit=crop&w=685&q=80');
+}

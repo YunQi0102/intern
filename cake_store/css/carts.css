@@ -1,0 +1,69 @@
+/* 少於md樣式調整 */
+@media (max-width: 768px) {
+
+    /* 自訂container */
+    .carts-container {
+        padding-top: 0 !important;
+    }
+
+    /* 頁尾深綠 */
+    footer .pm-footer {
+        margin-top: 0 !important;
+    }
+}
+
+/* 少於lg樣式調整 */
+@media (max-width: 992px) {
+
+    /* 自訂container */
+    .carts-container {
+        padding-top: 5px !important;
+    }
+}
+
+/* 自訂container */
+.carts-container {
+    padding-top: 40px;
+}
+
+/* --您的購物車-- */
+
+/* 標題 */
+.carts-container .py-cart {
+    padding: 20px 0;
+}
+
+/* 表格 */
+.carts-container .table .p-ctable-row {
+    padding: 35px 0 !important;
+}
+
+/* 圖片 */
+.table .p-ctable-row .media-md-img,
+.carts-container .container .media-img {
+    height: 110px;
+    background-image: url('https://images.unsplash.com/photo-1497052254059-f3e0bf1a5133?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ce7267675921fc7e41b5610f49750a40&auto=format&fit=crop&w=685&q=80');
+}
+
+/* md以上圖片 */
+.table .p-ctable-row .media-md-img {
+    width: 110px;
+}
+
+/* 少於md圖片 */
+.carts-container .container .media-img {
+    width: 150px;
+}
+
+/* 數量 */
+.btn-td {
+    border: #EAF0ED 1.2px solid;
+    color: #3F5D45;
+    width: 50px;
+    height: 48px;
+}
+
+/* 數量加減懸停 */
+.table .p-ctable-row .btn-group .btn-quantity:hover {
+    background-color: #EAF0ED;
+}

@@ -1,0 +1,110 @@
+/* 少於xl樣式調整 */
+@media (max-width: 1200px) {
+    .products-container .list-group {
+        font-size: 22px;
+    }
+}
+
+/* 少於lg樣式調整 */
+@media (max-width: 992px) {
+    .products-container .list-group {
+        font-size: 20px !important;
+    }
+}
+
+/* 少於md樣式調整 */
+@media (max-width: 768px) {
+
+    /* 自訂container */
+    .products-container {
+        padding-top: 0 !important;
+    }
+}
+
+/* 自訂container */
+.products-container {
+    padding-top: 50px;
+}
+
+/* --導覽選單-- */
+
+/* 導覽選單標題 */
+.products-container .list-group .list-header {
+    background-color: #3F5D45 !important;
+    color: white !important;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+}
+
+/* 導覽選單內容 */
+.products-container .list-group .list-body {
+    border: #EAF0ED 1px solid;
+    color: #3F5D45 !important;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+}
+
+/* 導覽選單預設選取 */
+.products-container .list-group-item.active {
+    border: #EAF0ED 1px solid;
+    color: #3F5D45;
+    background-color: #EAF0ED;
+}
+
+/* --卡片圖片-- */
+.products-container .card .card-img {
+    height: 310px;
+    position: relative;
+}
+
+.products-container .card .card-img.one {
+    background-image: url(https://bit.ly/2QiWeQW);
+}
+
+.products-container .card .card-img.two {
+    background-image: url(https://bit.ly/2zBjQuq);
+}
+
+.products-container .card .card-img.three {
+    background-image: url(https://bit.ly/2zKOP7w);
+}
+
+.products-container .card .card-img.four {
+    background-image: url(https://bit.ly/2NcDVuB);
+}
+
+.products-container .card .card-img.five {
+    background-image: url(https://bit.ly/2zBDAxX);
+}
+
+.products-container .card .card-img.six {
+    background-image: url(https://bit.ly/2zL5jN7);
+}
+
+/* --頁碼-- */
+
+/* 頁碼一般 */
+.products-container .pagination .page-link {
+    border: #EAF0ED 1.2px solid;
+    border-radius: 0 !important;
+    padding: 16px 25px !important;
+    color: #3F5D45 !important;
+}
+
+/* 頁碼懸停 */
+.products-container .pagination .page-link:hover {
+    background-color: #EAF0ED;
+}
+
+/* 頁碼預設選取 */
+.products-container .pagination .page-link.active {
+    background-color: #3F5D45 !important;
+    color: white !important;
+    pointer-events: none;
+}
+
+.products-container .pagination .page-link.prev {
+    opacity: 0.5;
+    pointer-events: none;
+}
