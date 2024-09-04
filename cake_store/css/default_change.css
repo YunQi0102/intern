@@ -1,21 +1,21 @@
 /* nav按鈕 */
 .nav-link {
-    color: #3f5d4580 !important;
+    color: var(--nav-btn-color) !important;
 }
 
 /* nav按鈕懸停 */
 .nav-link:hover {
-    color: #3f5d45a3 !important;
+    color: var(--nav-btn-hover-color) !important;
 }
 
 /* nav當前頁按鈕 */
 .nav-link.active {
-    color: #3F5D45 !important;
+    color: var(--main-color) !important;
     pointer-events: none;
     font-weight: 600;
 }
 
-/* 輸入框logo和輸入按鈕 */
+/* 輸入框icon和送出按鈕 */
 .input-group-text {
     border: 0;
 }
@@ -30,7 +30,12 @@
     padding: 15px 0;
 }
 
+/* 當前導覽選單防呆 */
+.list-group-item.active {
+    pointer-events: none;
+}
+
 /* 導覽選單懸停 */
 .list-group-item-action:hover {
-    background-color: #EAF0ED;
+    background-color: var(--main-light-color);
 }

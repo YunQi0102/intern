@@ -23,13 +23,13 @@
     /* 連結社群背景 */
     .register-container .bg-md-register {
         height: 100px;
-        background-color: #EAF0ED;
+        background-color: var(--main-light-color);
     }
 
     /* 登入背景 */
     .register-container .bg-login {
         height: 480px !important;
-        background-color: #3F5D45;
+        background-color: var(--main-color);
     }
 
     /* 登入標題 */
@@ -68,7 +68,7 @@
 /* 背景 */
 .register-container .bg-login {
     height: 340px;
-    background-color: #3F5D45;
+    background-color: var(--main-color);
 }
 
 /* 標題 */
@@ -87,7 +87,7 @@
 /* 背景 */
 .register-container .bg-register {
     height: 340px;
-    background-color: #EAF0ED;
+    background-color: var(--main-light-color);
 }
 
 /* title */
@@ -99,12 +99,12 @@
 .register-container .link .btn-link {
     width: 380px;
     height: 56px;
-    border: #ccdbd4 1px solid;
+    border: var(--register-link-border-color) 1px solid;
 }
 
 /* 連結按鈕懸停 */
 .register-container .link .btn-link:hover {
-    border: #ccdbd4 2px solid;
+    border: var(--register-link-border-color) 2px solid;
 }
 
 /* --連結按鈕圖片-- */

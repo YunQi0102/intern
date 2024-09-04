@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="utf-8">
@@ -16,14 +16,12 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white pt-3 pb-3 sticky-top">
         <div class="container px-0 d-flex align-items-end">
-            <!-- 甜點店Logo(md以上) -->
-            <a class="navbar-brand mx-0 d-none d-md-block" href="index.html">
-                <img src="./img/logo-nav.svg" width="220px" height="40px" class="d-inline-block align-top" alt="">
-            </a>
-            <!-- 甜點店Logo(少於md) -->
-            <a class="navbar-brand mx-0 pt-0 d-block d-md-none" href="index.html">
-                <img src="./img/mobile-logo-nav.svg" width="140px" height="30px" class="d-inline-block align-top"
-                    alt="">
+            <!-- 甜點店Logo -->
+            <a class="navbar-brand mx-0" href="index.html">
+                <!-- md以上 -->
+                <div class="nav-logo1 d-none d-md-block"></div>
+                <!-- 少於md -->
+                <div class="nav-logo2 mt-2 d-block d-md-none"></div>
             </a>
             <!-- 購物車 -->
             <div class="mx-3 mb-2 order-md-last">
@@ -45,15 +43,15 @@
             </div>
         </div>
     </nav>
-    <header class="container d-flex justify-content-center" style="height: 600px; position: relative;">
+    <header class="container d-flex justify-content-center position-relative">
         <!-- 主圖片 -->
         <div class="row">
             <div class="main-img col-md-12 bg-cover"></div>
         </div>
         <!-- 三欄選單 -->
-        <div class="row no-gutters menu" style="position: absolute; top: 500px;">
+        <div class="row no-gutters menu">
             <div class="col-4 menu-border border-left-0">
-                <a class="text-main" style="position: relative;">
+                <a class="text-main">
                     <span class="menu-text first active">本日精選</span>
                     <!-- 表層顏色覆蓋 -->
                     <div class="menu-cover active"></div>
@@ -62,7 +60,7 @@
                 </a>
             </div>
             <div class="col-4 menu-border">
-                <a class="text-main menu-a" style="position: relative; cursor: pointer;">
+                <a class="text-main menu-a">
                     <span class="menu-text second">人氣推薦</span>
                     <!-- 表層顏色覆蓋 -->
                     <div class="menu-cover"></div>
@@ -71,7 +69,7 @@
                 </a>
             </div>
             <div class="col-4 menu-border border-right-0">
-                <a class="text-main menu-a" style="position: relative; cursor: pointer;">
+                <a class="text-main menu-a">
                     <span class="menu-text third">新品上市</span>
                     <!-- 表層顏色覆蓋 -->
                     <div class="menu-cover"></div>
@@ -83,87 +81,63 @@
     </header>
     <!-- 為什麼選擇做甜點 -->
     <section class="container-fluid py-section1 bg-main-light">
-        <div class="container px-0" style="position: relative;">
-            <!-- lg以上 -->
-            <div class="d-none d-lg-block">
-                <!-- 圖片 -->
-                <div class="img1 bg-cover"></div>
-                <!-- 內文 -->
-                <div class="row">
-                    <div class="col-md-10 home-paragraph ml-5 mt-3">
-                        <p class="text-green">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
-                        <p class="text-green">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                        <p class="text-green">是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                    </div>
-                    <!-- 標語圖 -->
+        <div class="container px-0 position-relative">
+            <div class="row px-div-title">
+                <!-- 少於lg標語圖 -->
+                <div class="d-block d-lg-none bg-white col-12 py-4 d-flex justify-content-center">
                     <div class="title1"></div>
                 </div>
+                <!-- lg以上標語圖 -->
+                <div class="d-none d-lg-block">
+                    <div class="title1-lg"></div>
+                </div>
+                <!-- 圖片 -->
+                <div class="col-12 img1 bg-cover"></div>
             </div>
-            <!-- 少於lg -->
-            <div class="d-block d-lg-none">
-                <div class="row px-3">
-                    <!-- 標語圖 -->
-                    <div class="col-12 bg-white py-5 d-flex justify-content-center">
-                        <div class="title1"></div>
-                    </div>
-                    <!-- 圖片 -->
-                    <div class="col-12 img1 bg-cover"></div>
-                    <!-- 內文 -->
-                    <div class="col-12 home-paragraph p-4 pr-lg-0 ml-0 mt-lg-3 ml-lg-5 ml-xl-3">
-                        <p class="text-green">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
-                        <p class="text-green">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                        <p class="text-green">是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                    </div>
+            <!-- 內文 -->
+            <div class="row">
+                <div class="col-12 col-lg-10 home-paragraph ml-0 p-lg-0 ml-lg-4 mt-lg-3">
+                    <p class="text-green">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                    <p class="text-green">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
+                    <p class="text-green">是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- 為什麼一定要吃甜點 -->
     <section class="container-fluid py-section2 bg-main-light">
-        <div class="container px-0" style="position: relative;">
-            <!-- lg以上 -->
-            <div class="d-none d-lg-block">
-                <!-- 圖片 -->
-                <div class="img2 bg-cover"></div>
-                <!-- 內文 -->
-                <div class="row">
-                    <div class="col-md-4 home-paragraph pr-0 ml-5 ml-xl-3 mt-3">
-                        <p class="text-green">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
-                        <p class="text-green">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                        <p class="text-green">是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                    </div>
-                    <!-- 標語圖 -->
+        <div class="container px-0 position-relative">
+            <div class="row px-div-title">
+                <!-- 少於lg標語圖 -->
+                <div class="d-block d-lg-none bg-white col-12 py-4 d-flex justify-content-center">
                     <div class="title2"></div>
                 </div>
+                <!-- lg以上標語圖 -->
+                <div class="d-none d-lg-block">
+                    <div class="title2-lg"></div>
+                </div>
+                <!-- 圖片 -->
+                <div class="col-12 img2 bg-cover"></div>
             </div>
-            <!-- 少於lg -->
-            <div class="d-block d-lg-none">
-                <div class="row px-3">
-                    <!-- 標語圖 -->
-                    <div class="col-12 bg-white py-5 d-flex justify-content-center">
-                        <div class="title2"></div>
-                    </div>
-                    <!-- 圖片 -->
-                    <div class="col-12 img2 bg-cover"></div>
-                    <!-- 內文 -->
-                    <div class="col-12 home-paragraph p-4 pr-lg-0 ml-0 mt-lg-3 ml-lg-5 ml-xl-3">
-                        <p class="text-green">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
-                        <p class="text-green">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                        <p class="text-green">是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                    </div>
+            <!-- 內文 -->
+            <div class="row">
+                <div class="col-12 col-lg-4 home-paragraph ml-0 p-lg-0 ml-lg-5 mt-lg-3">
+                    <p class="text-green mr-lg-1 mr-xl-2">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                    <p class="text-green">一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
+                    <p class="text-green">是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- 想吃甜點不用理由 -->
-    <section class="container-fluid py-section3 d-flex justify-content-center" style="position: relative;">
+    <section class="container-fluid py-section3 d-flex justify-content-center position-relative">
         <!-- lg以上 -->
         <div class="d-none d-lg-block title3"></div>
         <!-- 少於lg -->
-        <div class="d-block d-lg-none title3 py-5">
+        <div class="d-block d-lg-none title3 py-5"></div>
     </section>
     <!-- 精選卡片 -->
-    <section class="container-fluid pb-0 pb-lg-5" style="position: relative;">
+    <section class="container-fluid pb-0 pb-lg-5 position-relative">
         <div class="container">
             <div class="card-deck row">
                 <!-- 卡片1 -->
@@ -172,7 +146,7 @@
                         <!-- 圖片 -->
                         <div class="card1-img rounded-0 bg-cover"></div>
                         <!-- 標籤 -->
-                        <div class="square" style="position: absolute; left: 20px;">本日精選</div>
+                        <div class="square">本日精選</div>
                         <!-- 愛心 -->
                         <a class="btn-heart">
                             <i class="fa-regular fa-heart fa-xl heart-default"></i>
@@ -196,7 +170,7 @@
                         <!-- 圖片 -->
                         <div class="card2-img rounded-0 bg-cover"></div>
                         <!-- 標籤 -->
-                        <div class="square" style="position: absolute; left: 20px;">本日精選</div>
+                        <div class="square">本日精選</div>
                         <!-- 愛心 -->
                         <a class="btn-heart">
                             <i class="fa-regular fa-heart fa-xl heart-default"></i>
@@ -220,7 +194,7 @@
                         <!-- 圖片 -->
                         <div class="card3-img rounded-0 bg-cover"></div>
                         <!-- 標籤 -->
-                        <div class="square" style="position: absolute; left: 20px;">本日精選</div>
+                        <div class="square">本日精選</div>
                         <!-- 愛心 -->
                         <a class="btn-heart">
                             <i class="fa-regular fa-heart fa-xl heart-default"></i>
@@ -232,8 +206,8 @@
                                 <div class="col-sm h5 pm-card-name card-border"><strong>NT$ 450</strong></div>
                             </div>
                             <div class="row card-border border-top-0">
-                                <a class="col btn bg-main-light py-3 rounded-0 text-main btn-cart"><span
-                                        class="h5"><strong>加入購物車</strong></span></a>
+                                <a class="col btn bg-main-light py-3 rounded-0 text-main btn-cart">
+                                    <span class="h5"><strong>加入購物車</strong></span></a>
                             </div>
                         </div>
                     </div>
@@ -307,8 +281,8 @@
                 <div class="footer-container d-flex row no-gutters">
                     <!-- 社群icons -->
                     <div class="col-12 col-md-4 col-lg-7 d-flex">
-                        <div class="icon-ins mr-2"></div>
-                        <div class="icon-fb"></div>
+                        <a class="icon-ins mr-2"></a>
+                        <a class="icon-fb"></a>
                     </div>
                     <!-- 版權所有 -->
                     <div class="col-12 col-md-8 col-lg-5 mt-1 mt-md-0

@@ -21,16 +21,40 @@
     }
 }
 
+header.container {
+    height: 500px;
+    position: relative;
+}
+
 /* 自訂container */
 .products-container {
     padding-top: 50px;
+}
+
+/* 主圖片 */
+header .main-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/products-img-main.avif);
+}
+
+/* 標題圖 */
+header .title3 {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    width: 0;
+    height: 360px;
+    background-image: url(../img/title3.svg);
 }
 
 /* --導覽選單-- */
 
 /* 導覽選單標題 */
 .products-container .list-group .list-header {
-    background-color: #3F5D45 !important;
+    background-color: var(--main-color) !important;
     color: white !important;
     font-weight: bold;
     letter-spacing: 2.5px;
@@ -38,8 +62,8 @@
 
 /* 導覽選單內容 */
 .products-container .list-group .list-body {
-    border: #EAF0ED 1px solid;
-    color: #3F5D45 !important;
+    border: var(--main-border);
+    color: var(--main-color) !important;
     font-weight: bold;
     letter-spacing: 2.5px;
     cursor: pointer;
@@ -47,9 +71,9 @@
 
 /* 導覽選單預設選取 */
 .products-container .list-group-item.active {
-    border: #EAF0ED 1px solid;
-    color: #3F5D45;
-    background-color: #EAF0ED;
+    border: var(--main-border);
+    color: var(--main-color);
+    background-color: var(--main-light-color);
 }
 
 /* --卡片圖片-- */
@@ -59,47 +83,47 @@
 }
 
 .products-container .card .card-img.one {
-    background-image: url(https://bit.ly/2QiWeQW);
+    background-image: url(../img/home-img-card2.avif);
 }
 
 .products-container .card .card-img.two {
-    background-image: url(https://bit.ly/2zBjQuq);
+    background-image: url(../img/home-img-featured1.avif);
 }
 
 .products-container .card .card-img.three {
-    background-image: url(https://bit.ly/2zKOP7w);
+    background-image: url(../img/products-img1.avif);
 }
 
 .products-container .card .card-img.four {
-    background-image: url(https://bit.ly/2NcDVuB);
+    background-image: url(../img/products-img2.avif);
 }
 
 .products-container .card .card-img.five {
-    background-image: url(https://bit.ly/2zBDAxX);
+    background-image: url(../img/home-img-featured2.avif);
 }
 
 .products-container .card .card-img.six {
-    background-image: url(https://bit.ly/2zL5jN7);
+    background-image: url(../img/products-img3.avif);
 }
 
 /* --頁碼-- */
 
 /* 頁碼一般 */
 .products-container .pagination .page-link {
-    border: #EAF0ED 1.2px solid;
+    border: var(--main-light-color) 1.2px solid;
     border-radius: 0 !important;
     padding: 16px 25px !important;
-    color: #3F5D45 !important;
+    color: var(--main-color) !important;
 }
 
 /* 頁碼懸停 */
 .products-container .pagination .page-link:hover {
-    background-color: #EAF0ED;
+    background-color: var(--main-light-color);
 }
 
 /* 頁碼預設選取 */
 .products-container .pagination .page-link.active {
-    background-color: #3F5D45 !important;
+    background-color: var(--main-color) !important;
     color: white !important;
     pointer-events: none;
 }

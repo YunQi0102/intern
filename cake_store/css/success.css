@@ -11,13 +11,18 @@
     }
 }
 
+/* container高度 */
+.container.success {
+    height: 500px;
+}
+
 /* 主要圖片 */
 .container .main-img {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    background-image: url(https://bit.ly/2P7GhNd);
+    background-image: url(../img/success.avif);
 }
 
 /* --進度條-- */
@@ -35,7 +40,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #3f5d45;
+    background-color: var(--main-color);
     transform: translateY(-50%);
     width: 100%;
 }
@@ -44,10 +49,10 @@
 .process-set .step-circle {
     height: 25px;
     width: 25px;
-    border: 1px solid #3f5d45;
+    border: 1px solid var(--main-color);
     border-radius: 20px;
     position: relative;
-    background-color: #3f5d45;
+    background-color: var(--main-color);
     z-index: 2;
 }
 

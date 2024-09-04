@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="utf-8">
@@ -16,14 +16,12 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white pt-3 pb-3 sticky-top">
         <div class="container px-0 d-flex align-items-end">
-            <!-- 甜點店Logo(md以上) -->
-            <a class="navbar-brand mx-0 d-none d-md-block" href="index.html">
-                <img src="./img/logo-nav.svg" width="220px" height="40px" class="d-inline-block align-top" alt="">
-            </a>
-            <!-- 甜點店Logo(md下) -->
-            <a class="navbar-brand mx-0 pt-0 d-block d-md-none" href="index.html">
-                <img src="./img/mobile-logo-nav.svg" width="140px" height="30px" class="d-inline-block align-top"
-                    alt="">
+            <!-- 甜點店Logo -->
+            <a class="navbar-brand mx-0" href="index.html">
+                <!-- md以上 -->
+                <div class="nav-logo1 d-none d-md-block"></div>
+                <!-- 少於md -->
+                <div class="nav-logo2 mt-2 d-block d-md-none"></div>
             </a>
             <!-- 購物車 -->
             <div class="mx-3 mb-2 order-md-last">
@@ -57,8 +55,7 @@
                             </div>
                             <!-- 進度條 -->
                             <div class="col-6 ml-auto px-0 p-checkout-title">
-                                <div class="process-set d-flex justify-content-between active1"
-                                    style="position: relative;">
+                                <div class="process-set d-flex justify-content-between active1">
                                     <div class="step-circle d-flex align-items-center justify-content-center active">
                                         <i class="d-none d-lg-block fa-solid fa-circle"></i>
                                         <i class="d-block d-lg-none fa-solid fa-circle fa-sm"></i>

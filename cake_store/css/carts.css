@@ -19,6 +19,25 @@
     .carts-container {
         padding-top: 5px !important;
     }
+
+    /* --訂單摘要-- */
+
+    /* 卡片樣式 */
+    .card {
+        color: var(--main-color) !important;
+        background-color: white !important;
+    }
+
+    /* 標題 */
+    .card-header {
+        border-bottom: 0 !important;
+        background-color: var(--main-light-color) !important;
+    }
+
+    /* 表格 */
+    .card .table {
+        background-color: white !important;
+    }
 }
 
 /* 自訂container */
@@ -42,7 +61,7 @@
 .table .p-ctable-row .media-md-img,
 .carts-container .container .media-img {
     height: 110px;
-    background-image: url('https://images.unsplash.com/photo-1497052254059-f3e0bf1a5133?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ce7267675921fc7e41b5610f49750a40&auto=format&fit=crop&w=685&q=80');
+    background-image: url(../img/carts-img.avif);
 }
 
 /* md以上圖片 */
@@ -57,13 +76,32 @@
 
 /* 數量 */
 .btn-td {
-    border: #EAF0ED 1.2px solid;
-    color: #3F5D45;
+    border: var(--main-light-color) 1.2px solid;
+    color: var(--main-color);
     width: 50px;
     height: 48px;
 }
 
 /* 數量加減懸停 */
 .table .p-ctable-row .btn-group .btn-quantity:hover {
-    background-color: #EAF0ED;
+    background-color: var(--main-light-color);
+}
+
+/* --訂單摘要-- */
+
+/* 卡片樣式 */
+.card {
+    color: var(--main-light-color);
+    background-color: var(--main-color);
+}
+
+/* 標題 */
+.card-header {
+    padding: 20px 0;
+    background-color: var(--main-color);
+}
+
+/* 表格 */
+.card .table {
+    background-color: var(--main-color);
 }

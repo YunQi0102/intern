@@ -26,9 +26,9 @@
         width: 430px !important;
     }
 
-    /* section標語2 */
-    section .title2 {
-        left: 400px !important;
+    /* lg以上標語圖2 */
+    section .title2-lg {
+        left: 390px !important;
     }
 }
 
@@ -54,14 +54,16 @@
         left: 100px !important;
     }
 
-    /* --section直向內文-- */
+    /* section直向內文 */
     section .home-paragraph {
         writing-mode: horizontal-tb !important;
         height: auto !important;
+        width: 800px !important;
         line-height: 30px !important;
+        padding: 20px 30px !important;
     }
 
-    /* --section圖片大小-- */
+    /* section圖片大小 */
     section .img1,
     section .img2 {
         position: relative !important;
@@ -69,33 +71,33 @@
         height: 150px;
     }
 
-    /* --section標語圖-- */
+    /* section標語圖 */
     section .title1,
     section .title2,
     section .title3 {
         position: relative !important;
         top: 0 !important;
-        left: 0 !important;
         height: 90px !important;
         width: 300px !important;
+        background-color: #ffffff !important;
     }
 
-    /* 本日精選 */
+    /* 精選卡片內容(home、products) */
     .border-right-0 {
-        border: #EAF0ED 1px solid !important;
+        border: var(--main-border) !important;
     }
 
     /* --為什麼選擇做甜點-- */
 
     /* 背景大小 */
-    .py-section1 {
+    section.py-section1 {
         padding: 0 !important;
         margin-top: 210px !important;
     }
 
     /* 圖片 */
     section .img1 {
-        background-image: url(https://bit.ly/2xPn7Eq);
+        background-image: url(../img/home-img-sec1.avif);
     }
 
     /* 標語圖 */
@@ -106,14 +108,14 @@
     /* --為什麼一定要吃甜點-- */
 
     /* 背景大小 */
-    .py-section2 {
+    section.py-section2 {
         padding: 0 !important;
         margin-top: 0 !important;
     }
 
     /* 圖片 */
     section .img2 {
-        background-image: url(https://bit.ly/2zzAQS4);
+        background-image: url(../img/home-img-sec2.avif);
     }
 
     /* 標語圖 */
@@ -124,7 +126,7 @@
     /* --想吃甜點不需要理由-- */
 
     /* 背景大小 */
-    .py-section3 {
+    section.py-section3 {
         margin: 0 !important;
     }
 
@@ -180,16 +182,35 @@
     }
 }
 
+header.container {
+    height: 600px;
+    position: relative;
+}
+
 /* 主圖片 */
 header .main-img {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    background-image: url(https://bit.ly/2OhbMHr);
+    background-image: url(../img/home-img-main.avif);
 }
 
 /* --三欄選單-- */
+
+/* 選單位置 */
+header div.menu {
+    position: absolute;
+    top: 500px;
+}
+
+header div.menu a {
+    position: relative;
+}
+
+header div.menu .menu-a {
+    cursor: pointer;
+}
 
 /* 選單大小 */
 header .menu-img {
@@ -199,17 +220,17 @@ header .menu-img {
 
 /* 本日精選圖 */
 header .menu-img.first {
-    background-image: url(https://bit.ly/2QbVsVR);
+    background-image: url(../img/home-img-card1.avif);
 }
 
 /* 人氣推薦圖 */
 header .menu-img.second {
-    background-image: url(https://bit.ly/2QiWeQW);
+    background-image: url(../img/home-img-card2.avif);
 }
 
 /* 新品上市圖 */
 header .menu-img.third {
-    background-image: url(https://bit.ly/2R5tqwD);
+    background-image: url(../img/home-img-card3.avif);
 }
 
 /* 選單一般表層 */
@@ -218,8 +239,9 @@ header .menu-cover {
     top: 0;
     width: 300px;
     height: 250px;
-    background-color: rgba(63, 93, 69, 0.8);
+    background-color: var(--main-cover-color);
     backdrop-filter: blur(5px);
+    transition: 0.5s;
 }
 
 /* 選單一般文字 */
@@ -237,14 +259,14 @@ header .menu-text {
 
 /* 選單懸停背景(清晰黃底) */
 header .menu-a:hover .menu-cover {
-    background-color: rgba(255, 225, 128, 0.8);
+    background-color: var(--miner-cover-color);
     backdrop-filter: unset;
     transition: 0.5s;
 }
 
 /* 選單懸停文字 */
 header .menu-a:hover .menu-text {
-    color: #3F5D45;
+    color: var(--main-color);
     font-weight: bold;
     transition: 0.5s;
 }
@@ -255,13 +277,13 @@ header .menu-cover.active {
     top: 0;
     width: 300px;
     height: 250px;
-    background-color: rgba(255, 225, 128, 0.8);
+    background-color: var(--miner-cover-color);
     backdrop-filter: unset;
 }
 
 /* 已選取的文字 */
 header .menu-text.active {
-    color: #3F5D45;
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -271,7 +293,12 @@ header .menu-border {
     border-right: white 1px solid;
 }
 
-/* --section直向內文-- */
+/* section標語圖、圖片寬度 */
+section .px-div-title {
+    padding: 0 15px;
+}
+
+/* section直向內文 */
 section .home-paragraph {
     writing-mode: vertical-rl;
     height: 330px;
@@ -282,7 +309,7 @@ section .home-paragraph {
 /* --為什麼選擇做甜點-- */
 
 /* 背景大小 */
-.py-section1 {
+section.py-section1 {
     padding: 50px 0px;
     margin-top: 280px;
 }
@@ -294,11 +321,21 @@ section .img1 {
     left: 0;
     width: 550px;
     height: 490px;
-    background-image: url(https://bit.ly/2xPn7Eq);
+    background-image: url(../img/home-img-sec1.avif);
 }
 
-/* 標語圖 */
+/* 少於lg標語圖 */
 section .title1 {
+    position: absolute;
+    top: -20%;
+    height: 300px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-image: url(../img/title1.svg);
+}
+
+/* lg以上標語圖 */
+section .title1-lg {
     position: absolute;
     top: -20%;
     right: 0;
@@ -311,7 +348,7 @@ section .title1 {
 /* --為什麼一定要吃甜點-- */
 
 /* 背景大小 */
-.py-section2 {
+section.py-section2 {
     padding: 50px 0px;
     margin-top: 100px;
 }
@@ -323,14 +360,23 @@ section .img2 {
     right: 0;
     width: 550px;
     height: 490px;
-    background-image: url(https://bit.ly/2zzAQS4);
+    background-image: url(../img/home-img-sec2.avif);
 }
-
-/* 標語圖 */
+/* 少於lg標語圖 */
 section .title2 {
     position: absolute;
     top: -20%;
-    left: 440px;
+    height: 300px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-image: url(../img/title2.svg);
+}
+
+/* lg以上標語圖 */
+section .title2-lg {
+    position: absolute;
+    top: -20%;
+    left: 460px;
     height: 300px;
     width: 100px;
     background-repeat: no-repeat;
@@ -340,7 +386,7 @@ section .title2 {
 /* --想吃甜點不需要理由-- */
 
 /* 背景大小 */
-.py-section3 {
+section.py-section3 {
     padding: 40px 0px;
     margin-top: 110px;
     margin-bottom: 330px;
@@ -359,22 +405,24 @@ section .title3 {
 /* --精選卡片-- */
 
 /* 圖片大小 */
-section .card1-img, section .card2-img, section .card3-img {
+section .card1-img,
+section .card2-img,
+section .card3-img {
     position: relative;
     height: 310px;
 }
 
 /* 圖片1 */
 section .card1-img {
-    background-image: url(https://bit.ly/2zBjQuq);
+    background-image: url(../img/home-img-featured1.avif);
 }
 
 /* 圖片2 */
 section .card2-img {
-    background-image: url(https://bit.ly/2zBDAxX);
+    background-image: url(../img/home-img-featured2.avif);
 }
 
 /* 圖片3 */
 section .card3-img {
-    background-image: url(https://bit.ly/2QbVsVR);
+    background-image: url(../img/home-img-featured3.avif);
 }

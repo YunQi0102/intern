@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="utf-8">
@@ -16,14 +16,12 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white pt-3 pb-3 sticky-top">
         <div class="container px-0 d-flex align-items-end">
-            <!-- 甜點店Logo(md以上) -->
-            <a class="navbar-brand mx-0 d-none d-md-block" href="index.html">
-                <img src="./img/logo-nav.svg" width="220px" height="40px" class="d-inline-block align-top" alt="">
-            </a>
-            <!-- 甜點店Logo(md下) -->
-            <a class="navbar-brand mx-0 pt-0 d-block d-md-none" href="index.html">
-                <img src="./img/mobile-logo-nav.svg" width="140px" height="30px" class="d-inline-block align-top"
-                    alt="">
+            <!-- 甜點店Logo -->
+            <a class="navbar-brand mx-0" href="index.html">
+                <!-- md以上 -->
+                <div class="nav-logo1 d-none d-md-block"></div>
+                <!-- 少於md -->
+                <div class="nav-logo2 mt-2 d-block d-md-none"></div>
             </a>
             <!-- 購物車 -->
             <div class="mx-3 mb-2 order-md-last">
@@ -50,7 +48,9 @@
             <div class="row">
                 <!-- 您的購物車 -->
                 <div class="col-lg-8 p-0 pr-lg-3">
-                    <h1 class="h4 text-center bg-main-light text-main py-cart mb-0"><strong>您的購物車</strong></h1>
+                    <h1 class="h4 text-center bg-main-light text-main py-cart mb-0">
+                        <strong>您的購物車</strong>
+                    </h1>
                     <!-- lg以上內容 -->
                     <div class="d-none d-md-block">
                         <table class="table table-light text-main">
@@ -193,43 +193,16 @@
                     </div>
                 </div>
                 <!-- 訂單摘要 -->
-                <div class="col-lg-4 px-0 mb-0 mb-sm-4">
-                    <!-- lg以上 -->
-                    <div class="d-none d-lg-block">
-                        <div class="container bg-order-total px-4">
+                <div class="col-12 col-lg-4 px-0 mb-0 mb-sm-4">
+                    <div class="card rounded-0 border-0">
+                        <div class="container">
                             <!-- 標題 -->
-                            <div class="p-ot-title border-bottom mb-1">
-                                <h2 class="text-center text-white h4"><strong>訂單摘要</strong></h2>
-                            </div>
-                            <!-- 內容 -->
-                            <table class="table table-dark table-borderless bg-main">
-                                <tr>
-                                    <td class="p-table-row">小計</td>
-                                    <td class="text-right p-table-row">NT$ 2,700</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-table-row">運費</td>
-                                    <td class="text-right p-table-row">NT$ 300</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-table-row h5">總計</td>
-                                    <td class="text-right p-table-row h5">NT$ 3000</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!-- 結帳 -->
-                        <a href="checkout.html" class="btn btn-block bg-btn-main text-main rounded-0 py-3">
-                            <span class="h4"><strong>結帳</strong></span></a>
-                    </div>
-                    <!-- 少於lg -->
-                    <div class="d-block d-lg-none container">
-                        <div class="card text-main rounded-0 border-0">
-                            <h2 class="card-header bg-main-light text-center h4 rounded-0 border-0">
+                            <h2 class="card-header text-center h4 rounded-0 border-bottom">
                                 <strong>訂單摘要</strong>
                             </h2>
                             <!-- 內容 -->
                             <div class="py-0">
-                                <table class="table table-light table-borderless">
+                                <table class="table table-borderless bg-main">
                                     <tr>
                                         <td class="p-table-row">小計</td>
                                         <td class="text-right p-table-row">NT$ 2,700</td>
@@ -245,11 +218,10 @@
                                 </table>
                             </div>
                         </div>
+                        <!-- 結帳按鈕 -->
+                        <a href="checkout.html" class="btn btn-block bg-btn-main text-main rounded-0 py-3">
+                            <span class="h4"><strong>結帳</strong></span></a>
                     </div>
-                    <!-- 少於lg結帳 -->
-                    <a href="checkout.html"
-                        class="d-block d-lg-none btn btn-block bg-btn-main text-main rounded-0 py-3">
-                        <span class="h4"><strong>結帳</strong></span></a>
                 </div>
             </div>
         </div>

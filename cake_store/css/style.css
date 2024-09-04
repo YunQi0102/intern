@@ -30,6 +30,22 @@
     }
 }
 
+/* 樣式表 */
+:root {
+    --main-color: #3F5D45; /* 主要深綠 */
+    --main-light-color: #EAF0ED; /* 主要淺綠 */
+    --miner-color: #8DA291; /* 次要綠(section內文、卡片標題) */
+    --main-btn-color: #FFE180; /* 主要按鈕色 */
+    --main-btn-hover-color: #ffd85a; /* 主要按鈕懸停色 */
+    --miner-btn-color-hover: #d4e0da; /* 加入購物車按鈕懸停色 */
+    --nav-btn-color: #3f5d4580; /* Navbar按鈕色 */
+    --nav-btn-hover-color: #3f5d45a3; /* Navbar按鈕懸停色 */
+    --main-border: #EAF0ED 1px solid; /* 主要框線 */
+    --main-cover-color: #3f5d45cc; /* 首頁選單表層主要色 */
+    --miner-cover-color: #ffe180cc; /* 首頁選單表層次要色 */
+    --register-link-border-color: #ccdbd4; /* 登入頁社群連結邊框色 */
+}
+
 /* 圖片置中 */
 .bg-cover {
     background-size: cover;
@@ -48,66 +64,89 @@
 
 /* 購物車按鈕 */
 nav .cart-set {
-    color: #3f5d4580;
+    color: var(--nav-btn-color);
 }
 
 /* 購物車按鈕懸停 */
 nav .cart-set:hover {
-    color: #3f5d45a3;
+    color: var(--nav-btn-hover-color);
 }
 
 /* 購物車按鈕當前頁 */
 nav .cart-set.active {
-    color: #3F5D45;
+    color: var(--main-color);
 }
 
 /* 輸入框提示字 */
 input::placeholder {
-    color: #8DA291 !important;
+    color: var(--miner-color) !important;
+}
+
+/* 相對位置 */
+.position-relative {
+    position: relative;
 }
 
 /* --文字色-- */
 
 /* 主要深綠 */
 .text-main {
-    color: #3F5D45 !important;
+    color: var(--main-color) !important;
 }
 
 /* section內文、訂單摘要/購物清單/連結社群標題 */
 .text-green {
-    color: #8DA291;
+    color: var(--miner-color);
 }
 
 /* 購物車頁標題、頁尾訂閱郵件 */
 .text-light-green {
-    color: #EAF0ED;
+    color: var(--main-light-color);
 }
 
 /* --背景色-- */
 
 /* 深綠背景 */
 .bg-main {
-    background-color: #3F5D45;
+    background-color: var(--main-color);
 }
 
 /* 淺綠背景 */
 .bg-main-light {
-    background-color: #EAF0ED;
+    background-color: var(--main-light-color);
 }
 
 /* input底色 */
 .bg-input {
-    background-color: #EAF0ED !important;
+    background-color: var(--main-light-color) !important;
 }
 
 /* 主要按鈕色 */
 .bg-btn-main {
-    background-color: #FFE180;
+    background-color: var(--main-btn-color);
 }
 
 /* 主要按鈕懸停 */
 .bg-btn-main:hover {
-    background-color: #ffd85a;
+    background-color: var(--main-btn-hover-color);
+}
+
+/* --Navbar-- */
+
+/* md以上 Logo */
+.nav-logo1 {
+    width: 215px;
+    height: 40px;
+    background-image: url(../img/logo-nav.svg);
+    background-repeat: no-repeat;
+}
+
+/* 少於md Logo */
+.nav-logo2 {
+    width: 140px;
+    height: 25px;
+    background-image: url(../img/mobile-logo-nav.svg);
+    background-repeat: no-repeat;
 }
 
 /* --卡片-- */
@@ -116,12 +155,14 @@ input::placeholder {
 .card .square {
     width: 48px;
     height: 125px;
-    background-color: #3F5D45;
+    background-color: var(--main-color);
     padding-right: 10px;
     color: white;
     writing-mode: vertical-rl;
     font-size: 18px;
     letter-spacing: 5px;
+    position: absolute;
+    left: 20px;
 }
 
 /* 卡片外邊框 */
@@ -131,7 +172,7 @@ input::placeholder {
 
 /* 卡片內容邊框 */
 .card-border {
-    border: #EAF0ED 1px solid;
+    border: var(--main-border);
 }
 
 /* 卡片名稱價錢 */
@@ -142,7 +183,12 @@ input::placeholder {
 
 /* 加入購物車懸停 */
 .card .container .btn-cart:hover {
-    background-color: #d4e0da;
+    background-color: var(--miner-btn-color-hover);
+}
+
+/* 卡片內表格 */
+.card .table .p-table-row {
+    padding: 15px 0 0 !important;
 }
 
 /* --愛心按鈕-- */
@@ -161,12 +207,12 @@ input::placeholder {
 
 /* 愛心預設(空心) */
 .card .btn-heart .heart-default {
-    color: #3F5D45;
+    color: var(--main-color);
 }
 
 /* 愛心點擊後(實心) */
 .card .btn-heart .heart-active {
-    color: #3F5D45;
+    color: var(--main-color);
     opacity: 0;
 }
 
@@ -231,13 +277,13 @@ footer .footer-container {
 .footer-container .icon-fb {
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 
 .footer-container .icon-ins {
     background-image: url(../img/instagram.svg);
 }
 
-/* 頁尾icon */
 .footer-container .icon-fb {
     background-image: url(../img/facebook.svg);
 }
@@ -245,22 +291,4 @@ footer .footer-container {
 /* 頁尾版權所有 */
 .footer-container .rights-reserved {
     font-family: 'Times New Roman', Times, serif;
-}
-
-/* --carts訂單摘要-- */
-
-/* 背景 */
-.bg-order-total {
-    background-color: #3F5D45;
-    height: 230px;
-}
-
-/* 標題 */
-.p-ot-title {
-    padding: 30px 0 15px;
-}
-
-/* 內容 */
-.table .p-table-row {
-    padding: 15px 0 0 !important;
 }
